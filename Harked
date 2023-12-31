@@ -1,0 +1,504 @@
+--// Made by 14anz_exiledAltz \\--
+
+-- Objects
+-- 5.62
+-- The Password is HackingDaBeast
+
+local PlayerName = game.Players.LocalPlayer.Name
+
+Exploit = Instance.new("ScreenGui")
+
+UI = Instance.new("Frame")
+ScrollingFrame = Instance.new("ScrollingFrame")
+GScrollingFrame = Instance.new("ScrollingFrame")
+Source = Instance.new("TextBox")
+Execute = Instance.new("TextButton")
+Clear = Instance.new("TextButton")
+Title = Instance.new("TextLabel")
+Close = Instance.new("TextButton")    --x 3  y 12
+Open = Instance.new("TextButton")
+SExploit = Instance.new("SurfaceGui")
+SUI = Instance.new("Frame")
+SSource = Instance.new("TextBox")
+SExecute = Instance.new("TextButton")
+SClear = Instance.new("TextButton")
+STitle = Instance.new("TextLabel")
+SClose = Instance.new("TextButton")
+SOpen = Instance.new("TextButton")
+Name = Instance.new("TextLabel")
+SName = Instance.new("TextLabel")
+Login = Instance.new("Frame")
+Title_2 = Instance.new("TextLabel")
+Name_2 = Instance.new("TextLabel")
+EnterName = Instance.new("TextBox")
+Username = Instance.new("TextLabel")
+TextButton = Instance.new("TextButton")
+GLogin = Instance.new("Frame")
+GTitle_2 = Instance.new("TextLabel")
+GName_2 = Instance.new("TextLabel")
+GEnterName = Instance.new("TextBox")
+GUsername = Instance.new("TextLabel")
+GTextButton = Instance.new("TextButton")
+-- Properties
+
+Exploit.Name = "Exploit"
+Exploit.Parent = game.Players[PlayerName].PlayerGui
+
+UI.Name = "UI"
+UI.Parent = Exploit
+UI.Active = true
+UI.BackgroundColor3 = Color3.new(0, 0, 0)
+UI.BorderColor3 = Color3.new(0, 1, 1)
+UI.Draggable = true
+UI.Position = UDim2.new(0, 31, 0, 111)
+UI.Selectable = true
+UI.Size = UDim2.new(0, 600, 0, 300)
+UI.Visible = false
+
+ScrollingFrame.Parent = UI
+ScrollingFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+ScrollingFrame.BorderColor3 = Color3.new(0, 1, 1)
+ScrollingFrame.Position = UDim2.new(0, 10, 0, 10)
+ScrollingFrame.Size = UDim2.new(0, 580, 0, 240)
+ScrollingFrame.CanvasSize = UDim2.new(0,0,20,0)
+ScrollingFrame.Changed:connect(function()
+	GScrollingFrame.CanvasPosition = ScrollingFrame.CanvasPosition
+end)
+Source.Name = "Source"
+Source.Parent = ScrollingFrame
+Source.BackgroundColor3 = Color3.new(0, 0, 0)
+Source.BorderColor3 = Color3.new(0, 0,0)
+Source.Position = UDim2.new(0, 0, 0, 0)
+Source.Size = UDim2.new(0, 550, 0, 3000)
+Source.ClearTextOnFocus = false
+Source.Font = Enum.Font.Code
+Source.FontSize = Enum.FontSize.Size18
+Source.MultiLine = true
+Source.Text = 'print("Hello World!")'
+Source.TextColor3 = Color3.new(0, 1, 0.968628)
+Source.TextSize = 18
+Source.TextWrapped = true
+Source.TextXAlignment = Enum.TextXAlignment.Left
+Source.TextYAlignment = Enum.TextYAlignment.Top
+
+Execute.Name = "Execute"
+Execute.Parent = UI
+Execute.BackgroundColor3 = Color3.new(0, 0, 0)
+Execute.BorderColor3 = Color3.new(0, 1, 1)
+Execute.Position = UDim2.new(0, 150, 0, 260)
+Execute.Size = UDim2.new(0, 60, 0, 30)
+Execute.Font = Enum.Font.SciFi
+Execute.FontSize = Enum.FontSize.Size14
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.new(0, 1, 0.968628)
+Execute.TextSize = 14
+Execute.MouseButton1Down:connect(function()
+	Sound.PlaybackSpeed = 1
+	Sound:Play()
+	Name.Text = "Executed!"
+	SName.Text = "Executed!"
+	loadstring(tostring(Source.Text))()
+	wait(1)
+	Name.Text = "Hacked"
+	SName.Text = "Hacked"
+end)
+Clear.Name = "Clear"
+Clear.Parent = UI
+Clear.BackgroundColor3 = Color3.new(0, 0, 0)
+Clear.BorderColor3 = Color3.new(0, 1, 1)
+Clear.Position = UDim2.new(0, 380, 0, 260)
+Clear.Size = UDim2.new(0, 60, 0, 30)
+Clear.Font = Enum.Font.SciFi
+Clear.FontSize = Enum.FontSize.Size14
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.new(0, 1, 0.968628)
+Clear.TextSize = 14
+Clear.MouseButton1Down:connect(function()
+	Name.Text = "Cleared!"
+	SName.Text = "Cleared!"
+	Source.Text = ""
+	Sound.PlaybackSpeed = 0.93
+	Sound:Play()
+	wait(1)
+	Name.Text = "Hacked"
+	SName.Text = "Hacked"
+	SSource.Text = ""
+end)
+Title.Name = "Title"
+Title.Parent = UI
+Title.BackgroundColor3 = Color3.new(0, 0, 0)
+Title.BackgroundTransparency = 1
+Title.Position = UDim2.new(0, 270, 0, 250)
+Title.Size = UDim2.new(0, 50, 0, 50)
+Title.Font = Enum.Font.SciFi
+Title.FontSize = Enum.FontSize.Size14
+Title.Text = "Executor [Hacked]"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextSize = 14
+
+Close.Name = "Close"
+Close.Parent = UI
+Close.BackgroundColor3 = Color3.new(0, 0, 0)
+Close.BorderColor3 = Color3.new(0, 0.952941, 1)
+Close.Position = UDim2.new(0, 270, 0, 301)
+Close.Size = UDim2.new(0, 50, 0, 15)
+Close.Font = Enum.Font.Code
+Close.FontSize = Enum.FontSize.Size14
+Close.Text = "Close"
+Close.TextColor3 = Color3.new(0, 1, 0.968628)
+Close.TextSize = 14
+Close.MouseButton1Down:connect(function()
+	Sound.PlaybackSpeed = 0.93
+	Sound:Play()
+	Light.Enabled = false
+	UI.Visible = false
+	for Down = 146,600,16 do
+		SUI.Position = UDim2.new(0,200,0,Down)
+		wait(0)
+	end
+	Open.Visible = true
+	SExploit.Enabled = false
+	SUI.Position = UDim2.new(0,200,0,600)
+end)
+Open.Name = "Open"
+Open.Parent = Exploit
+Open.BackgroundColor3 = Color3.new(0, 0, 0)
+Open.BorderColor3 = Color3.new(0, 0.984314, 1)
+Open.Position = UDim2.new(0, 100, 0, 460)
+Open.Size = UDim2.new(0, 50, 0, 50)
+Open.Visible = false
+Open.Font = Enum.Font.Code
+Open.FontSize = Enum.FontSize.Size14
+Open.Text = "Open"
+Open.TextColor3 = Color3.new(0, 1, 1)
+Open.TextSize = 14
+Open.MouseButton1Down:connect(function()
+	Sound.PlaybackSpeed = 1
+	Sound:Play()
+	UI.Visible = true
+	SUI.Visible = true
+	Open.Visible = false
+	SExploit.Enabled = true
+	Light.Enabled = true
+	for Up = 600,146,-16 do
+		SUI.Position = UDim2.new(0,200,0,Up)
+		wait(0)
+	end
+	SUI.Position = UDim2.new(0,200,0,146)
+end)
+
+Name.Name = "Name"
+Name.Parent = UI
+Name.BackgroundColor3 = Color3.new(0, 0, 0)
+Name.BorderColor3 = Color3.new(0, 1, 0.933333)
+Name.Position = UDim2.new(0, 190, 0, -31)
+Name.Size = UDim2.new(0, 220, 0, 30)
+Name.Font = Enum.Font.SciFi
+Name.FontSize = Enum.FontSize.Size24
+Name.Text = "Hacked"
+Name.TextColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+Name.TextSize = 24
+
+Screen = Instance.new("Part",workspace[PlayerName])
+Screen.Anchored = true
+Screen.CanCollide = false
+Screen.Size = Vector3.new(1, 35, 50)
+Screen.Transparency = 1
+Sound = Instance.new("Sound",Screen)
+Sound.SoundId = "rbxassetid://226892749"
+Sound.Volume = 3
+IntroSound = Instance.new("Sound",Screen)
+IntroSound.SoundId = "rbxassetid://458243133"
+IntroSound.Volume = 3
+Light = Instance.new("PointLight",Screen)
+Light.Brightness = 10000
+Light.Range = 10
+Light.Color = Color3.new(0,1,1)
+-- Properties
+
+SExploit.Name = "Exploit"
+SExploit.Parent = Screen
+SExploit.Face = "Left"
+
+SUI.Name = "UI"
+SUI.Parent = SExploit
+SUI.BackgroundColor3 = Color3.new(0, 0, 0)
+SUI.BorderColor3 = Color3.new(0, 1, 1)
+SUI.Position = UDim2.new(0, 200, 0, 146)
+SUI.Size = UDim2.new(0, 600, 0, 300)
+SUI.Active = true
+SUI.Visible = false
+
+GScrollingFrame.Parent = SUI
+GScrollingFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+GScrollingFrame.BorderColor3 = Color3.new(0, 1, 1)
+GScrollingFrame.Position = UDim2.new(0, 10, 0, 10)
+GScrollingFrame.Size = UDim2.new(0, 580, 0, 240)
+GScrollingFrame.CanvasSize = UDim2.new(0,0,20,0)
+GScrollingFrame.ScrollingEnabled = false
+
+SSource.Name = "Source"
+SSource.Parent = GScrollingFrame
+SSource.MultiLine = true
+SSource.BackgroundColor3 = Color3.new(0, 0, 0)
+SSource.BorderColor3 = Color3.new(0, 0,0)
+SSource.Position = UDim2.new(0, 0, 0, 0)
+SSource.Size = UDim2.new(0, 580, 0, 3000)
+SSource.Font = Enum.Font.Code
+SSource.FontSize = Enum.FontSize.Size14
+SSource.Text = "print(\"Hello world\")"
+SSource.TextColor3 = Color3.new(0, 1, 0.968628)
+SSource.TextSize = 18
+SSource.ClearTextOnFocus = false
+SSource.TextWrapped = true
+SSource.TextXAlignment = Enum.TextXAlignment.Left
+SSource.TextYAlignment = Enum.TextYAlignment.Top
+
+SExecute.Name = "Execute"
+SExecute.Parent = SUI
+SExecute.BackgroundColor3 = Color3.new(0, 0, 0)
+SExecute.BorderColor3 = Color3.new(0, 1, 1)
+SExecute.Position = UDim2.new(0, 150, 0, 260)
+SExecute.Size = UDim2.new(0, 60, 0, 30)
+SExecute.Font = Enum.Font.Code
+SExecute.FontSize = Enum.FontSize.Size14
+SExecute.Text = "Execute"
+SExecute.TextColor3 = Color3.new(0, 1, 0.968628)
+SExecute.TextSize = 14
+
+SClear.Name = "Clear"
+SClear.Parent = SUI
+SClear.BackgroundColor3 = Color3.new(0, 0, 0)
+SClear.BorderColor3 = Color3.new(0, 1, 1)
+SClear.Position = UDim2.new(0, 380, 0, 260)
+SClear.Size = UDim2.new(0, 60, 0, 30)
+SClear.Font = Enum.Font.Code
+SClear.FontSize = Enum.FontSize.Size14
+SClear.Text = "Clear"
+SClear.TextColor3 = Color3.new(0, 1, 0.968628)
+SClear.TextSize = 14
+
+SName.Name = "Name"
+SName.Parent = SUI
+SName.BackgroundColor3 = Color3.new(0, 0, 0)
+SName.BorderColor3 = Color3.new(0, 1, 0.933333)
+SName.Position = UDim2.new(0, 190, 0, -31)
+SName.Size = UDim2.new(0, 220, 0, 30)
+SName.Font = Enum.Font.SciFi
+SName.FontSize = Enum.FontSize.Size24
+SName.Text = "Hacked"
+SName.TextColor3 = Color3.new(1, 1, 1)
+SName.TextSize = 24
+
+STitle.Name = "Title"
+STitle.Parent = SUI
+STitle.BackgroundColor3 = Color3.new(0, 0, 0)
+STitle.BackgroundTransparency = 1
+STitle.Position = UDim2.new(0, 270, 0, 250)
+STitle.Size = UDim2.new(0, 50, 0, 50)
+STitle.Font = Enum.Font.SciFi
+STitle.FontSize = Enum.FontSize.Size14
+STitle.Text = "Executor [Hacked]"
+STitle.TextColor3 = Color3.new(1, 1, 1)
+STitle.TextSize = 14
+
+SClose.Name = "Close"
+SClose.Parent = SUI
+SClose.BackgroundColor3 = Color3.new(0, 0, 0)
+SClose.BorderColor3 = Color3.new(0, 0.952941, 1)
+SClose.Position = UDim2.new(0, 270, 0, 301)
+SClose.Size = UDim2.new(0, 50, 0, 15)
+SClose.Font = Enum.Font.Code
+SClose.FontSize = Enum.FontSize.Size14
+SClose.Text = "Close"
+SClose.TextColor3 = Color3.new(0, 1, 0.968628)
+SClose.TextSize = 14
+Po = Instance.new("BodyPosition",Screen)
+Po.MaxForce = Vector3.new(999999999,999999999,999999999)
+
+Login.Name = "Login"
+Login.Parent = Exploit
+Login.Active = true
+Login.BackgroundColor3 = Color3.new(0, 0, 0)
+Login.BorderColor3 = Color3.new(0, 1, 1)
+Login.Draggable = true
+Login.Position = UDim2.new(0, 59, 0, 169)
+Login.Size = UDim2.new(0, 600, 0, 300)
+
+GLogin.Name = "Login"
+GLogin.Parent = SExploit
+GLogin.Active = true
+GLogin.Visible = true
+GLogin.BackgroundColor3 = Color3.new(0, 0, 0)
+GLogin.BorderColor3 = Color3.new(0, 1, 1)
+GLogin.Draggable = true
+GLogin.Position = UDim2.new(0, 200, 0, 146)
+GLogin.Size = UDim2.new(0, 600, 0, 300)
+
+Title_2.Name = "Title"
+Title_2.Parent = Login
+Title_2.BackgroundColor3 = Color3.new(0, 0, 0)
+Title_2.BackgroundTransparency = 1
+Title_2.Position = UDim2.new(0, 270, 0, 250)
+Title_2.Size = UDim2.new(0, 50, 0, 50)
+Title_2.Font = Enum.Font.SciFi
+Title_2.FontSize = Enum.FontSize.Size14
+Title_2.Text = "Executor [Hacked]"
+Title_2.TextColor3 = Color3.new(1, 1, 1)
+Title_2.TextSize = 14
+
+Name_2.Name = "Name"
+Name_2.Parent = Login
+Name_2.BackgroundColor3 = Color3.new(0, 0, 0)
+Name_2.BorderColor3 = Color3.new(0, 1, 0.933333)
+Name_2.Position = UDim2.new(0, 190, 0, -31)
+Name_2.Selectable = true
+Name_2.Size = UDim2.new(0, 220, 0, 30)
+Name_2.Font = Enum.Font.SciFi
+Name_2.FontSize = Enum.FontSize.Size24
+Name_2.Text = "Hacked"
+Name_2.TextColor3 = Color3.new(0.54902, 0.54902, 0.54902)
+Name_2.TextSize = 24
+
+EnterName.Name = "EnterName"
+EnterName.Parent = Login
+EnterName.BackgroundColor3 = Color3.new(0, 0, 0)
+EnterName.BorderColor3 = Color3.new(0, 0.984314, 1)
+EnterName.Position = UDim2.new(0, 220, 0, 100)
+EnterName.Size = UDim2.new(0, 150, 0, 40)
+EnterName.Font = Enum.Font.SciFi
+EnterName.FontSize = Enum.FontSize.Size28
+EnterName.Text = "Key"
+EnterName.TextColor3 = Color3.new(0, 0.984314, 1)
+EnterName.TextScaled = true
+EnterName.TextSize = 28
+EnterName.TextWrapped = true
+EnterName.Changed:connect(function(qf)
+	GEnterName.Text = EnterName.Text
+end)
+Username.Name = "Username"
+Username.Parent = Login
+Username.BackgroundColor3 = Color3.new(0, 0, 0)
+Username.BackgroundTransparency = 1
+Username.Position = UDim2.new(0, 270, 0, 60)
+Username.Size = UDim2.new(0, 50, 0, 50)
+Username.Font = Enum.Font.SciFi
+Username.FontSize = Enum.FontSize.Size14
+Username.Text = "Key"
+Username.TextColor3 = Color3.new(1, 1, 1)
+Username.TextSize = 14
+
+TextButton.Parent = Login
+TextButton.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton.BorderColor3 = Color3.new(0, 0.952941, 1)
+TextButton.Position = UDim2.new(0, 255, 0, 150)
+TextButton.Size = UDim2.new(0, 80, 0, 30)
+TextButton.Font = Enum.Font.SciFi
+TextButton.FontSize = Enum.FontSize.Size28
+TextButton.Text = "Login"
+TextButton.TextColor3 = Color3.new(1, 1, 1)
+TextButton.TextSize = 28
+TextButton.MouseButton1Down:connect(function()
+	Login.Visible = false
+	GLogin.Visible = false
+	UI.Visible = true
+	SUI.Visible = true
+	IntroSound.Playing = true
+	Name.Text = "Logged In!"
+	SName.Text = "Logged In!"
+	wait(0.39)
+	IntroSound.Playing = false
+	IntroSound.TimePosition = 0
+	wait(0.61)
+	Name.Text = "Hacked"
+	SName.Text = "Hacked"
+end)
+
+GTitle_2.Name = "Title"
+GTitle_2.Parent = GLogin
+GTitle_2.BackgroundColor3 = Color3.new(0, 0, 0)
+GTitle_2.BackgroundTransparency = 1
+GTitle_2.Position = UDim2.new(0, 270, 0, 250)
+GTitle_2.Size = UDim2.new(0, 50, 0, 50)
+GTitle_2.Font = Enum.Font.SciFi
+GTitle_2.FontSize = Enum.FontSize.Size14
+GTitle_2.Text = "Executor [Hacked]"
+GTitle_2.TextColor3 = Color3.new(1, 1, 1)
+GTitle_2.TextSize = 14
+
+GName_2.Name = "Name"
+GName_2.Parent = GLogin
+GName_2.BackgroundColor3 = Color3.new(0, 0, 0)
+GName_2.BorderColor3 = Color3.new(0, 1, 0.933333)
+GName_2.Position = UDim2.new(0, 190, 0, -31)
+GName_2.Size = UDim2.new(0, 220, 0, 30)
+GName_2.Font = Enum.Font.SciFi
+GName_2.FontSize = Enum.FontSize.Size24
+GName_2.Text = "Hacked"
+GName_2.TextColor3 = Color3.new(0.54902, 0.54902, 0.54902)
+GName_2.TextSize = 24
+
+GEnterName.Name = "EnterName"
+GEnterName.Parent = GLogin
+GEnterName.BackgroundColor3 = Color3.new(0, 0, 0)
+GEnterName.BorderColor3 = Color3.new(0, 0.984314, 1)
+GEnterName.Position = UDim2.new(0, 220, 0, 100)
+GEnterName.Size = UDim2.new(0, 150, 0, 40)
+GEnterName.Font = Enum.Font.SciFi
+GEnterName.FontSize = Enum.FontSize.Size28
+GEnterName.Text = ""
+GEnterName.TextColor3 = Color3.new(0, 0.984314, 1)
+GEnterName.TextScaled = true
+GEnterName.TextSize = 28
+GEnterName.TextWrapped = true
+
+GUsername.Name = "Username"
+GUsername.Parent = GLogin
+GUsername.BackgroundColor3 = Color3.new(0, 0, 0)
+GUsername.BackgroundTransparency = 1
+GUsername.Position = UDim2.new(0, 270, 0, 60)
+GUsername.Size = UDim2.new(0, 50, 0, 50)
+GUsername.Font = Enum.Font.SciFi
+GUsername.FontSize = Enum.FontSize.Size14
+GUsername.Text = "Key"
+GUsername.TextColor3 = Color3.new(1, 1, 1)
+GUsername.TextSize = 14
+
+GTextButton.Parent = GLogin
+GTextButton.BackgroundColor3 = Color3.new(0, 0, 0)
+GTextButton.BorderColor3 = Color3.new(0, 0.952941, 1)
+GTextButton.Position = UDim2.new(0, 255, 0, 150)
+GTextButton.Size = UDim2.new(0, 80, 0, 30)
+GTextButton.Font = Enum.Font.SciFi
+GTextButton.FontSize = Enum.FontSize.Size28
+GTextButton.Text = "Login"
+GTextButton.TextColor3 = Color3.new(1, 1, 1)
+GTextButton.TextSize = 28
+IntroSound.TimePosition = 5.63
+IntroSound:Play()
+
+game:GetService("RunService").Stepped:connect(function()
+	Screen.Position = Vector3.new(workspace[PlayerName].Torso.Position.X + 5, workspace[PlayerName].Torso.Position.Y + 12,workspace[PlayerName].Torso.Position.Z - 6)
+	Po.Position = Vector3.new(workspace[PlayerName].Torso.Position.X + 5, workspace[PlayerName].Torso.Position.Y + 12,workspace[PlayerName].Torso.Position.Z - 6)
+end)
+Source.Changed:connect(function(q)
+	if q == "Text" then
+		SSource.Text = Source.Text
+	end
+end)
+workspace[PlayerName].Humanoid.Died:connect(function()
+	Screen:Remove()
+end)
+while true do
+	wait(0)
+	for i = 255,100,-5 do
+		SName.TextColor3 = Color3.fromRGB(i,i,i)
+		Name.TextColor3 = Color3.fromRGB(i,i,i)
+		wait(0)
+	end
+	for c = 100,255,5 do
+		SName.TextColor3 = Color3.fromRGB(c,c,c)
+		Name.TextColor3 = Color3.fromRGB(c,c,c)
+		wait(0)
+	end
+end
